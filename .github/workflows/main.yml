@@ -1,8 +1,5 @@
 name: Deploy via ftp
-      on: 
-        push:
-          branches:
-            - main
+      on: push
       jobs:
         deploy:
           name: Deploy
@@ -16,5 +13,4 @@ name: Deploy via ftp
               host: ${{ secrets.HOST }} 
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASS }}
-              localDir: "dist"
-              remoteDir: "/home/lullifest2/"
+              localDir: "laravel-10-bootstrap"
